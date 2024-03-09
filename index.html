@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--Custom CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <title>ToClick</title>
+</head>
+
+<body class="font-Mulish ">
+    <header class="max-w-screen-2xl w-5/6 mx-auto mt-10">
+        <!--  Nav bar started -->
+        <section id="nav-bar" class="">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <a class="text-3xl font-extrabold">ToClick</a>
+                </div>
+                <div class="navbar-end gap-4 text-wrap">
+
+                    <div class="tooltip hidden md:flex lg:flex" data-tip="Home">
+                        <button class="btn rounded-full"><img src="images/nav-1.svg" alt=""></button>
+                    </div>
+                    <div class="tooltip hidden md:flex lg:flex" data-tip="ToolTip">
+                        <button class="btn rounded-full"><img src="images/nav-2.svg" alt=""></button>
+                    </div>
+                    <div class="tooltip hidden md:flex lg:flex" data-tip="Add">
+                        <button class="btn rounded-full"><img src="images/nav-3.svg" alt=""></button>
+                    </div>
+                    <div class="tooltip hidden md:flex lg:flex" data-tip="Post">
+                        <button class="btn rounded-full"><img src="images/nav-4.svg" alt=""></button>
+                    </div>
+                    <button
+                        class="btn btn-primary px-6 bg-[#797DFC] rounded-[50px] text-white text-[20px] font-medium ">Sign
+                        in</button>
+                </div>
+            </div>
+        </section>
+        <!--  Nav bar close -->
+        <!-- Banner section Start -->
+        <section class=" banner mt-12">
+
+            <div
+                class="bg-[#12132D] max-w-full flex flex-col justify-between relative bg-[url('images/bgbanner.png')] bg-cover  rounded-[32px] hero-content p-0 items-stretch text-wrap">
+                <div class="flex flex-col md:flex-row lg:flex-row justify-evenly gap-16 p-20">
+                    <div class=" space-y-7 w-fit md:w-[65%] lg:w-[65%]">
+                        <p class="banner-normal items-stretch text-wrap">
+                            Welcome to the <span class="banner-span">ToClick</span> Forum
+                        </p>
+                        <p class="text-white font-medium text-[20px]">
+                            Are you ready to ToClick into a world of endless discussions, insights, and connections? Because once you're here, you'll never want to log off !!
+                        </p>
+                        <div class="md:relative lg:relative flex items-center">
+                            <input id="discuss-search-box" type="text" placeholder="Search here anything"
+                                class=" rounded-[50px] input input-bordered input-md md:w-full lg:w-full max-full h-16" />
+                            <button onclick="handleDiscussSearch()"
+                                class="btn btn-primary px-6 bg-[#797DFC] rounded-[50px] text-white text-[20px] font-medium md:absolute lg:absolute right-2">Search</button>
+                        </div>
+
+                    </div>
+                    <div class=" w-full md:w-[35%] lg:w-[35%] bg-white rounded-[32px] p-10 space-y-5 ">
+                        <div class="text-xl font-medium flex justify-between">
+                            <p>Registered Users</p>
+                            <p>01</p>
+                        </div>
+                        <div class="text-xl font-medium flex justify-between">
+                            <p>Forum</p>
+                            <p>05</p>
+                        </div>
+                        <div class="text-xl font-medium flex justify-between">
+                            <p>Topics</p>
+                            <p>01</p>
+                        </div>
+                        <div class="text-xl font-medium flex justify-between">
+                            <p>Replies</p>
+                            <p>01</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Banner section add -->
+    </header>
+    <main class="max-w-screen-2xl w-5/6 mx-auto my-24">
+        <section class="mb-12">
+            <div class="text-center justify-center items-center my-10 mx-auto">
+                <div>
+                    <h3 class="text-[40px] font-black">Let's Discuss</h3>
+                    <p class="mt-4 lg:mt-6 md:mx-20 lg:mx-60">Our forum is a vibrant community where members come
+                        together to discuss a wide range of topics. Whether you're passionate about technology, current
+                        events, arts and culture, or anything in between, you'll find engaging conversations and diverse
+                        perspectives here.</p>
+                </div>
+
+            </div>
+        </section>
+        <!-- Spinner start -->
+
+        <div id="loading-spinner1" class="text-center mb-5 hidden">
+            <span class="loading loading-bars loading-xs"></span>
+            <span class="loading loading-bars loading-sm"></span>
+            <span class="loading loading-bars loading-md"></span>
+            <span class="loading loading-bars loading-lg"></span>
+
+        </div>
+
+        <!-- Spinner end -->
+        <!-- Lets discuss part section -->
+        <section>
+            <div class="gap-10 flex flex-col md:flex-row lg:flex-row justify-between  my-20 bg-white ">
+                <!-- Lets discuss music section Start  -->
+                <div id="discuss-container" class="grid grid-cols-1 gap-5 w-max-full lg:w-[60%] h-fit ">
+                    <!-- Lets discuss Change part -->
+
+                </div>
+
+                <!-- Lets discuss music section end  -->
+                <!-- Lets discuss side task add -->
+                <div class=" bg-[#12132d0d] rounded-3xl p-6 space-y-3 w-max-full lg:w-[40%] h-fit">
+                    <!-- Side tittle part -->
+                    <div class="flex justify-between">
+                        <p class="font-bold text-xl">Title</p>
+                        <div class="flex justify-between gap-2">
+                            <div>
+                                <img src="images/Frame.svg" alt="">
+                            </div>
+                            <div>
+                                <p>Mark as read (<span id="read-value">0</span>)</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="side-cont" class="space-y-3 h-fit">
+                        <!-- Side change part -->
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Lets discuss part section end -->
+
+        <!-- Join our forum -->
+        <section>
+            <div class="hero py-10  bg-[#12132D] rounded-[32px]">
+                <div class="hero-content flex-col lg:flex-row-reverse gap-20 pl-16">
+                    <div>
+                        <img src="images/joinforum.png" class="lg:max-w-sm rounded-lg shadow-2xl" />
+                    </div>
+                    <div class="text-white">
+                        <h1 class="text-4xl font-black">Join Our Forum</h1>
+                        <p class="py-6 text-sm text-[#ffffffcc]">Join Our Forum to connect with like-minded individuals,
+                            share your thoughts and experiences, and learn from others.
+                        </p>
+                        <button
+                            class="btn btn-primary px-6 bg-[#797DFC] rounded-[50px] text-white text-[20px] font-bold">Registered
+                            Now</button>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Join our forum end-->
+        <!-- Latest Posts Start -->
+        <section class="my-12">
+            <div class="text-center justify-center items-center my-8 mx-auto">
+                <div>
+                    <h3 class="text-[40px] font-black">Latest Posts</h3>
+                    <p class="mt-4 lg:mt-6 md:mx-20 lg:mx-60">Browse the Latest Posts to see what's trending and join
+                        the conversation. From insightful discussions to helpful tips and inspiring stories, there's
+                        always something new to discover on the ToClick Forum.</p>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Spinner start -->
+
+        <div id="loading-spinner2" class="text-center mb-5 hidden">
+            <span class="loading loading-bars loading-xs"></span>
+            <span class="loading loading-bars loading-sm"></span>
+            <span class="loading loading-bars loading-md"></span>
+            <span class="loading loading-bars loading-lg"></span>
+
+        </div>
+
+        <!-- Spinner end -->
+        <!-- Latest Post Started -->
+        <section>
+            <div id="post-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-9 gap-7">
+                <!-- Latest Post edited -->
+
+            </div>
+        </section>
+        <!-- Latest Post end -->
+
+    </main>
+    <footer>
+        <section class="footer-col py-20">
+            <div class="text-center items-center">
+                <div>
+                    <h3 class="text-4xl font-black">ToClick</span> </h3>
+                </div>
+                <p class="mt-4 lg:mt-6 md:mx-20 lg:mx-60">Thank you for being part of our community. Let's Discuss,
+                    learn, and grow together!</p>
+
+                <div class="flex justify-center gap-5 my-5">
+                    <div><i class="fa-brands fa-twitter"></i></div>
+                    <div><i class="fa-brands fa-facebook"></i></div>
+                    <div><i class="fa-brands fa-instagram"></i></div>
+                    <div><i class="fa-brands fa-github"></i></div>
+                </div>
+                <div class="dashed-line "></div>
+                <p class="mt-10 text-sm text-gray-400">2017, All Rights Reserved.</p>
+            </div>
+        </section>
+    </footer>
+    <script src="js/latest_posts.js"></script>
+    <script src="js/lets_discuss.js"></script>
+</body>
+
+</html>
